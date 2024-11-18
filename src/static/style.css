@@ -1,0 +1,280 @@
+
+
+.navbar {
+
+    background-image: url("images/pic/beautiful-view-big-snowy-mountain-range-with-blue-sky-ski-resort-background-design-ai_255605-1253.avif");
+    background-size: cover;
+        min-height: 80px; 
+        line-height: 80px; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000
+    
+ }
+
+.navbar-brand, .nav-link, .navbar-toggler-icon {
+    color: black !important; }
+
+
+ .navbar-toggler {
+    border-color: black !important;  
+}
+
+    
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    text-align: center;
+    margin-top: 27px ;
+    
+}
+
+
+.layout {
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 10% 85% 5%;
+}
+
+
+
+aside {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 80px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    background-image: url("images/pic/beautiful-view-big-snowy-mountain-range-with-blue-sky-ski-resort-background-design-ai_255605-1253.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+    
+aside .list-group {
+    position: fixed; 
+    top: 120px; 
+    width: 250px; 
+    max-height: calc(100vh - 80px); 
+    overflow-y: auto;
+}
+      
+    
+    
+
+      
+
+
+main {
+    grid-column: span 5;
+    padding: 20px;
+    overflow: auto;
+    background-image: url("images/pic2/backrund11.jpg");
+    background-size: cover;
+}
+
+
+.products-table td{
+    vertical-align: middle;
+}
+
+
+.products-table img{
+    width: 80px;
+    height: 60px;
+    border:1px solid black;
+}
+
+.dandy_form {
+
+    width: 400px;
+    margin: auto;
+    border: 1px solid;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px;
+    text-align: left;
+}
+
+.dandy_form > input{
+    margin-bottom: 20px;
+}
+.active{
+    border:1px solid black;
+    padding: 5px;
+    background: yellow;
+    color:green;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.error {
+
+    margin-top: 150px;
+    font-size: large;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: auto; 
+    max-width: 300px; 
+    text-align: center; 
+}
+
+
+.auth{
+
+    border:1px solid green;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+
+
+
+.details_container{
+    border: 3px solid blue;
+
+    
+ }
+.details_container p{
+    font-size: x-large;
+}
+
+.like-button span {
+    margin-left: 5px;
+    font-size: 1em;
+} 
+
+
+
+
+.vacation-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    width: 300px; 
+    height: 100%; 
+    margin: 10px;
+    box-sizing: border-box;
+    border: 2px solid #140b0b; 
+    border-radius: 5px; 
+    overflow: hidden; 
+    background-color: #fff; 
+    box-shadow: black;
+    
+}
+
+.vacation-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.vacation-card img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 5px 5px 0 0; 
+}
+
+.vacation-card .card-body {
+    flex: 1; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    text-align: center;
+}
+
+.card-body{
+  
+    background-image: url("images/pic2/backrund14.jpg");
+    background-size: cover;
+}
+
+.vacation-card .like-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color:#007bff;
+    margin: 5px; 
+}
+
+.vacation-card .dates {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+/* .vacation-card .date-item {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+} */
+
+.vacation-card .info-row {
+    display: flex;
+    justify-content: space-between; 
+    margin: 10px 0;
+}
+
+.vacation-card .info-row .card-text {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.truncate-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    display: block;
+}
+
+
+.footer {
+    background-image: url("images/pic2/backrund11.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 150px; 
+    box-sizing: border-box;
+    overflow: hidden; 
+  
+}
+
+
+
+
+
+ 

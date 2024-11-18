@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Edit Vacation
+{% endblock title %}
+
+{% block content %}
+<h2>Edit Vacation: {{ vacation.vacationId }}</h2>
+<form method="post" class="dandy_form" enctype="multipart/form-data">
+    <input type="hidden" name="vacationId" value="{{ vacation.vacationId }}" class="form-control">
+
+    <label>Description</label>
+    <input type="text" name="v_description" value="{{ vacation.v_description }}" class="form-control">
+    <br>
+    
+    <label>Start Day</label>
+    <input type="date" name="StartDay" value="{{ vacation.StartDay }}" class="form-control" required>
+    <br>
+    
+    <label>Last Day</label>
+    <input type="date" name="LastDay" value="{{ vacation.LastDay }}" class="form-control" required>
+    <br>
+    
+    <label>Price</label>
+    <input type="number" name="price" value="{{ vacation.price }}" class="form-control">
+    <br>
+    
+    <label>Image</label>
+    <input type="file" name="image" accept="image/*" class="form-control">
+    <br>
+      
+    <label>Country</label>
+    <select name="countryId" class="form-control" required>
+        {% for country in countries %}
+            <option value="{{ country.countryId }}" {% if vacation.countryId == country.countryId %}selected{% endif %}>
+                {{ country.country }}
+            </option>
+        {% endfor %}
+    </select>
+    <br>
+    
+    <button class="btn btn-primary w-100">Update</button>
+</form>
+{% endblock content %}
+
+

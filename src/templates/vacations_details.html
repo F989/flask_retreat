@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Vacation Detail
+{% endblock title %}
+
+{% block content %}
+<div class= 'details_container'>
+<div>
+<h1>{{ vacation.vacationId }} {{ vacation.v_description }}</h1>
+<p>Start Day: {{ vacation.StartDay }}</p>
+<p>Last Day: {{ vacation.LastDay }}</p>
+<p>price: {{ vacation.price }}</p>
+<p>Country: {{ vacation.country }}</p>
+</div>
+
+
+<a href="{{ url_for('vacations_view.list') }}"{%  if active=='list' %} class='active' {% endif%}>Back</a>
+<br><br>
+
+
+<img src="{{  url_for('vacations_view.get_image', image_name =(vacation.image_name if vacation.image_name else '---') )}}">
+
+{% if current_user.roleId==admin %}
+
+<span>|</span>
+<a href="{{ url_for('vacations_view.edit',  id=vacation.vacationId)   }}">Edit</a>
+<span>|</span>
+<a onclick="confirmDelete()" href="{{ url_for('vacations_view.delete',  id=vacation.vacationId)   }}">Delete</a>
+</div>
+{% endif %}
+{% endblock content %}

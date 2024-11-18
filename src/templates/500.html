@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+500 - Server error  
+{% endblock title %}
+
+
+{% block content %}
+<h2>some error occurred, please try again</h2>
+
+<a href="{{ url_for('vacations_view.vacation')}}">back</a>
+
+
+{% endblock content %}

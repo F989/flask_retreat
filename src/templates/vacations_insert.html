@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+add Vacations
+{% endblock title %}
+
+{% block content %}
+
+<h2>New Vacation</h2>
+
+<form method="post" class="dandy_form" enctype="multipart/form-data">
+    
+    <label>v_description</label>
+    <input type="text" name="v_description" class="form-control" required>
+    <br>
+    
+    <label>Start Day</label>
+    <input type="date" name="StartDay" class="form-control" required>
+    <br>
+    
+    <label>Last Day</label>
+    <input type="date" name="LastDay" class="form-control" required>
+    <br>
+    
+    <label>Price</label>
+    <input type="number" name="price" class="form-control" required>
+    <br>
+
+    <label>Image</label>
+    <input type="file" name="image" accept="image/*" class="form-control" required>
+    <br>
+     
+    <label>Country</label>
+    <select name="countryId" class="form-control" required>
+        {% for country in countries %}
+            <option value="{{ country.countryId }}" {% if vacation and vacation.countryId == country.countryId %}selected{% endif %}>
+                {{ country.country }}
+            </option>
+        {% endfor %}
+    </select>
+  
+    <br>
+    
+    <button class="btn btn-primary w-100">Add</button>
+</form>
+
+{% endblock content %}
+

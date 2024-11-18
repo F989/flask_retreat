@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container">
+    
+    <div id="imageContainer" style="width: 100%; height: 350px; background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
+
+    <h2>Epic Vacations</h2>
+    <div class="row">
+        {% for vacation in vacations %}
+        <div class="col-md-4 mb-4">
+            <a href="{{ url_for('vacations_view.details', id=vacation.vacationId) }}" class="card vacation-card">
+                <img src="{{ url_for('vacations_view.get_image', image_name=(vacation.image_name if vacation.image_name else '---')) }}" class="card-img-top" alt="Vacation Image">
+                <div class="card-body">
+                    <h5 class="card-title truncate-text">{{ vacation.v_description }}</h5>
+                    <p class="card-text">ID: {{ vacation.vacationId }}</p>
+                    <div class="dates">
+                        <p class="date-item">Start Day: {{ vacation.StartDay }}</p>
+                        <p class="date-item">Last Day: {{ vacation.LastDay }}</p>
+                    </div>
+                    <div class="info-row">
+                        <span class="card-text">Price: {{ vacation.price }}</span>
+                        <span class="card-text">Country: {{ vacation.country }}</span>
+                    </div>
+                    <div class="like-section">
+                        
+                        <button  class="like-button" onclick="handleLikeClick(event, {{ vacation.vacationId }})">❤️🐟</button>
+                        <button  class="like-button" onclick="handleUnlikeClick(event, {{ vacation.vacationId }})">🤍</button>
+                        <span id="current-user" data-user-id="{{ current_user.userId }}"></span>
+                        <p class="card-text">Likes: <span id="like-count-{{ vacation.vacationId }}">{{ vacation.like_count }}</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+
+

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+register
+{% endblock title %}
+
+
+{% block content %}
+<h2>register</h2>
+
+<form method="post" class="dandy_form">
+    <label>First Name:</label>
+    <input type="text" name="fname"   class="form-control" required minlength="2" maxlength="20">
+    <br>
+    <label>Last Name:</label>
+    <input type="text" name="lname"   class="form-control" required minlength="2" maxlength="20">
+    <br>
+    <label>Email:</label>
+    <input type="email" name="Email" required class="form-control" required minlength="2" maxlength="100">
+    <br>
+    <label>Password:</label>
+    <input type="password" name="Password" required class="form-control" required minlength="5" maxlength="20">
+    <br>
+   
+
+    <button class="btn btn-primary w-100">Register</button>
+</form>
+{% endblock content %}
